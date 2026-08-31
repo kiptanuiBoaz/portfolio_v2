@@ -52,7 +52,7 @@ function ProjectNotFound() {
 function ProjectPage() {
   const { project } = Route.useLoaderData();
   const index = projects.findIndex((p) => p.slug === project.slug);
-  const next = projects[(index + 1) % projects.length];
+  const next = projects[(index + 1) % projects.length]!;
 
   return (
     <div className="min-h-screen bg-background font-body text-foreground">
