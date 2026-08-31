@@ -177,13 +177,6 @@ function HomePage() {
               <br />
               selected work · 2026
             </div>
-            <a
-              href="#contact"
-              className="rise label-mono mt-5 inline-flex items-center gap-2 border-b border-input pb-1 text-foreground transition-colors duration-300 hover:border-primary hover:text-primary [animation-delay:300ms]"
-            >
-              Start a project
-              <span className="text-primary">→</span>
-            </a>
           </div>
         </section>
 
