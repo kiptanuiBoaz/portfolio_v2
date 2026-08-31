@@ -1,0 +1,137 @@
+import notical from "@/assets/projects/notical.png";
+import wazibiz from "@/assets/projects/wazibiz.png";
+import geekgazette from "@/assets/projects/geekgazette.png";
+import harryPotter from "@/assets/projects/harry-potter.png";
+import sogy from "@/assets/projects/sogy.png";
+import simonsgame from "@/assets/projects/simonsgame.png";
+
+export type Project = {
+  slug: string;
+  name: string;
+  year: string;
+  summary: string;
+  description: string;
+  stack: string[];
+  image: string;
+  deployLink: string;
+  codeLink: string;
+};
+
+export const projects: Project[] = [
+  {
+    slug: "notical",
+    name: "Notical",
+    year: "2024",
+    summary:
+      "A Notion-to-Google-Calendar bridge that lets you manage Notion tasks straight from your calendar.",
+    description:
+      "Notycal is a dynamic integration tool designed to seamlessly connect your Notion workspace with your Google Calendar. It empowers you to edit and manage your Notion tasks straight from your Google Calendar interface. With Notycal, balancing your schedule and tasks becomes more efficient than ever before.",
+    stack: ["TypeScript", "Next.js", "Supabase", "MUI", "Redux"],
+    image: notical,
+    deployLink: "https://app.noticale.com/",
+    codeLink: "https://github.com/kiptanuiBoaz/notical-app",
+  },
+  {
+    slug: "wazibiz-ecommerce",
+    name: "WaziBiz Ecommerce",
+    year: "2024",
+    summary:
+      "Full commerce stack with Stripe card checkout and M-Pesa STK push for mobile money.",
+    description:
+      "An eCommerce application that enables users to browse products, add items to their cart, and proceed to a secure checkout via card using Stripe and mobile money via M-Pesa. Developed using the MERN stack with additional support from Firebase for authentication and data storage. It demonstrates the successful integration of MERN, Firebase and Stripe to build a functional eCommerce platform.",
+    stack: ["Node.js", "TypeScript", "React", "Firebase", "Redux"],
+    image: wazibiz,
+    deployLink: "https://wazibiz.vercel.app/",
+    codeLink: "https://github.com/kiptanuiBoaz/wazibiz",
+  },
+  {
+    slug: "geek-gazette",
+    name: "Geek Gazette",
+    year: "2023",
+    summary:
+      "A publishing platform for geek culture — tags, categories and a reading-first article view.",
+    description:
+      "The ultimate destination blog site for geeks. It covers a wide range of topics including culture, politics, technology, business, finance, food and drink, podcasts, sports, spirituality and music. The blog is a platform for people to share their thoughts and ideas on the latest trends and news in these areas.",
+    stack: ["MongoDB", "TypeScript", "Node.js", "React", "Redux"],
+    image: geekgazette,
+    deployLink: "https://geekgazette.vercel.app/",
+    codeLink: "https://github.com/kiptanuiBoaz/geekgazette/",
+  },
+  {
+    slug: "harry-potter",
+    name: "Harry Potter",
+    year: "2023",
+    summary:
+      "App Router experiment fetching the Harry Potter API into an indexed character register.",
+    description:
+      "The Harry Potter web application is a Next.js project that utilises the App Router, fetching data from the Harry Potter API to display character information in a table. The character names serve as links to individual character pages with more details.",
+    stack: ["TypeScript", "Next.js", "SCSS", "Redux"],
+    image: harryPotter,
+    deployLink: "https://harry-potter-lovat-ten.vercel.app/",
+    codeLink: "https://github.com/kiptanuiBoaz/harry-potter",
+  },
+  {
+    slug: "sogy-landing-page",
+    name: "Sogy Landing Page",
+    year: "2022",
+    summary:
+      "A hotel landing page — my first React project and a study in interface craft.",
+    description:
+      "Sogy is a landing page for an imaginary hotel and represents my first project in React, marking a significant milestone in my journey as a web developer. After transitioning from vanilla JavaScript, HTML and CSS, I immersed myself in React to enhance my skills and explore the possibilities it offers. Sogy showcases my technical abilities alongside my growing expertise in designing appealing user interfaces.",
+    stack: ["JavaScript", "React", "SCSS"],
+    image: sogy,
+    deployLink: "https://sogy-poc.vercel.app/",
+    codeLink: "https://github.com/kiptanuiBoaz/sogy-poc",
+  },
+  {
+    slug: "simonsgame",
+    name: "Simon Game",
+    year: "2022",
+    summary:
+      "The classic memory sequence game, built in pure JavaScript against the raw DOM.",
+    description:
+      "Simon, invented by Ralph H. Baer and Howard J. Morrison, is an electronic game that tests short-term memory skills. It presents a sequence of tones and lights for the user to replicate. As the user succeeds, the sequence lengthens and becomes more challenging. Using pure JavaScript I implemented this game, deepening my understanding of the DOM and JavaScript methods. Failing to replicate the pattern ends the game, requiring the player to restart.",
+    stack: ["JavaScript", "HTML", "CSS"],
+    image: simonsgame,
+    deployLink: "https://kiptanuiboaz.github.io/simon-s-game/",
+    codeLink: "https://github.com/kiptanuiBoaz/simon-s-game/",
+  },
+];
+
+export const skills: { text: string; note: string; level: number }[] = [
+  { text: "React", note: "Components / State", level: 5 },
+  { text: "JS / TS", note: "Type Safety", level: 4 },
+  { text: "Node.js", note: "APIs / Services", level: 4 },
+  { text: "MongoDB", note: "Documents", level: 4 },
+  { text: "Supabase", note: "Postgres / Auth", level: 4 },
+  { text: "REST APIs", note: "Contracts", level: 4 },
+  { text: "GraphQL", note: "Schemas / Resolvers", level: 4 },
+  { text: "Git", note: "Branching / Review", level: 4 },
+  { text: "SQL", note: "Data / Query", level: 3 },
+  { text: "Firebase", note: "Realtime / Hosting", level: 3 },
+  { text: "WordPress", note: "CMS / Elementor", level: 3 },
+];
+
+export const stack = [
+  "Node.js",
+  "React",
+  "TypeScript",
+  "Next.js",
+  "Supabase",
+  "MySQL",
+  "MongoDB",
+  "Redux",
+  "Firebase",
+  "Git",
+  "WordPress",
+];
+
+export const socials = [
+  { label: "GitHub", href: "https://github.com/kiptanuiBoaz" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/boaz-serem-466154217/" },
+  { label: "X", href: "https://twitter.com/kiptanui_boazo" },
+  { label: "WhatsApp", href: "https://wa.me/254705935133?text=Hello%20there!" },
+];
+
+export const RESUME_URL =
+  "https://drive.google.com/file/d/1fNee8VPCeI6TwWxv-k8jN9JkN0glyVfF/view?usp=drive_link";
