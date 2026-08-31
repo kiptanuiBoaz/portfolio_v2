@@ -142,7 +142,16 @@ function HomePage() {
               </a>
             ))}
           </nav>
-          <div className="label-mono text-foreground/40">Nairobi, KE</div>
+          <div className="flex items-center gap-5">
+            <span className="label-mono hidden text-foreground/40 lg:inline">Nairobi, KE</span>
+            <a
+              href="#contact"
+              className="label-mono inline-flex items-center gap-2 border border-primary px-4 py-2 text-primary transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+            >
+              Start a project
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
         </header>
 
         {/* Hero */}
