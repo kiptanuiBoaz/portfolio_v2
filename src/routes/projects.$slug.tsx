@@ -56,7 +56,7 @@ function ProjectPage() {
 
   return (
     <div className="min-h-screen bg-background font-body text-foreground">
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(125%_80%_at_18%_-12%,color-mix(in_oklab,var(--primary)_16%,transparent),transparent_58%)]" />
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(125%_80%_at_18%_-12%,color-mix(in_oklab,var(--primary)_8%,transparent),transparent_58%),radial-gradient(140%_90%_at_90%_110%,oklch(0.15_0.04_140_/0.55),transparent_65%)]" />
 
       <div className="relative mx-auto max-w-[1180px] px-6 sm:px-10">
         <header className="flex items-center justify-between border-b border-border py-8">
