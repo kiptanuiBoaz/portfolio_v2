@@ -44,7 +44,7 @@ function HeroGraphic() {
       className="pointer-events-none absolute inset-0 -top-12 -right-6 hidden opacity-40 lg:block lg:opacity-100"
       aria-hidden="true"
     >
-      <div className="relative h-full w-full font-mono text-[10px] leading-[1.1] text-foreground/20">
+      <div className="relative h-full w-full pt-24 font-mono text-[10px] leading-[1.1] text-foreground/20">
         <div className="flex gap-4">
           <div className="flex flex-col gap-1">
             <div className="text-primary/40">01 class Architecture {"{"}</div>
