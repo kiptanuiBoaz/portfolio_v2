@@ -103,7 +103,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={sending}
-        className="group mt-8 bg-primary px-7 py-3 font-display text-sm tracking-tight text-primary-foreground transition-colors duration-300 hover:bg-foreground disabled:opacity-60"
+        className="group mt-8 border border-primary/60 bg-primary/8 px-7 py-3 font-display text-sm tracking-tight text-primary transition-colors duration-300 hover:bg-primary/15 disabled:opacity-60"
       >
         Send message{" "}
         <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
