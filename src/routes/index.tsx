@@ -146,7 +146,7 @@ function HomePage() {
             <span className="label-mono hidden text-foreground/40 lg:inline">Nairobi, KE</span>
             <a
               href="#contact"
-              className="label-mono inline-flex items-center gap-2 border border-primary px-4 py-2 text-primary transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+              className="label-mono inline-flex items-center gap-2 border border-primary/50 px-4 py-2 text-primary transition-colors duration-300 hover:border-primary hover:bg-primary/10"
             >
               Start a project
               <span aria-hidden="true">→</span>
