@@ -195,8 +195,8 @@ function HomePage() {
         </header>
 
         {/* Hero */}
-        <section className="grid grid-cols-12 gap-x-6 pt-16 pb-16 sm:pt-24 sm:pb-24">
-          <div className="col-span-12 sm:col-span-9">
+        <section className="relative grid grid-cols-12 gap-x-6 pt-16 pb-16 sm:pt-24 sm:pb-24">
+          <div className="col-span-12 lg:col-span-7">
             <div className="rise label-mono mb-7 tracking-[0.22em] text-primary">
               Software Developer · Design-Forward Engineering
             </div>
@@ -211,19 +211,22 @@ function HomePage() {
               and interfaces that hold up in production.
             </p>
           </div>
-          <div className="col-span-12 sm:col-span-3 sm:justify-self-end sm:text-right">
-            <div className="rise label-mono text-foreground/40 [animation-delay:240ms]">
-              Available for
-              <br />
-              selected work · 2026
+          <div className="relative col-span-12 mt-12 min-h-[320px] lg:col-span-5 lg:mt-0">
+            <HeroGraphic />
+            <div className="rise relative z-10 sm:text-right [animation-delay:240ms]">
+              <div className="label-mono text-foreground/40">
+                Available for
+                <br />
+                selected work · 2026
+              </div>
+              <a
+                href="#contact"
+                className="rise label-mono mt-5 inline-flex items-center gap-2 border-b border-input pb-1 text-foreground transition-colors duration-300 hover:border-primary hover:text-primary [animation-delay:300ms]"
+              >
+                Start a project
+                <span className="text-primary">→</span>
+              </a>
             </div>
-            <a
-              href="#contact"
-              className="rise label-mono mt-5 inline-flex items-center gap-2 border-b border-input pb-1 text-foreground transition-colors duration-300 hover:border-primary hover:text-primary [animation-delay:300ms]"
-            >
-              Start a project
-              <span className="text-primary">→</span>
-            </a>
           </div>
         </section>
 
