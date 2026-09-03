@@ -12,13 +12,13 @@ export const Route = createFileRoute("/projects/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Project unavailable — Boaz Kiptanui" },
+          { title: "Project unavailable — Boaz Serem" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     const { project } = loaderData;
-    const title = `${project.name} — Boaz Kiptanui`;
+    const title = `${project.name} — Boaz Serem`;
     return {
       meta: [
         { title },
@@ -63,7 +63,7 @@ function ProjectPage() {
           <Link to="/" className="font-display text-sm tracking-tight">
             <span className="text-primary">BK</span>
             <span className="mx-2 text-foreground/30">/</span>
-            <span className="text-foreground/70">Kiptanui</span>
+            <span className="text-foreground/70">Serem</span>
           </Link>
           <Link
             to="/"

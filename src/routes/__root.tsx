@@ -78,18 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Boaz Kiptanui — Software Developer" },
+      { title: "Boaz Serem — Software Engineer" },
       {
         name: "description",
         content:
-          "Software developer in Nairobi building enterprise web applications with React, Next.js, Node.js and TypeScript.",
+          "Software engineer in Nairobi building scalable web applications with Python, Django, React, Next.js, Node.js and TypeScript.",
       },
-      { name: "author", content: "Boaz Kiptanui" },
-      { property: "og:title", content: "Boaz Kiptanui — Software Developer" },
+      { name: "author", content: "Boaz Serem" },
+      { property: "og:title", content: "Boaz Serem — Software Engineer" },
       {
         property: "og:description",
         content:
-          "Software developer in Nairobi building enterprise web applications with React, Next.js, Node.js and TypeScript.",
+          "Software engineer in Nairobi building scalable web applications with Python, Django, React, Next.js, Node.js and TypeScript.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -3,22 +3,22 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 import portrait from "@/assets/portrait.png";
-import { projects, skills, socials, stack, RESUME_URL } from "@/data/portfolio";
+import { experience, projects, skills, socials, stack, RESUME_URL } from "@/data/portfolio";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Boaz Kiptanui — Software Developer Portfolio" },
+      { title: "Boaz Serem — Software Engineer Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio of Boaz Kiptanui, a software developer in Nairobi building typed, resilient web products with React, Next.js, Node.js and TypeScript.",
+          "Portfolio of Boaz Serem, a software engineer in Nairobi building scalable web applications with Python, Django, React, Next.js, Node.js and TypeScript.",
       },
-      { property: "og:title", content: "Boaz Kiptanui — Software Developer Portfolio" },
+      { property: "og:title", content: "Boaz Serem — Software Engineer Portfolio" },
       {
         property: "og:description",
         content:
-          "Selected work, capabilities and contact details for Boaz Kiptanui, a software developer building considered web interfaces.",
+          "Selected work, experience, capabilities and contact details for Boaz Serem, a software engineer building scalable web applications.",
       },
     ],
   }),
@@ -29,10 +29,7 @@ function Level({ level }: { level: number }) {
   return (
     <div className="flex items-center gap-1.5" aria-label={`${level} out of 5`}>
       {[1, 2, 3, 4, 5].map((i) => (
-        <span
-          key={i}
-          className={`h-1.5 w-6 ${i <= level ? "bg-primary" : "bg-foreground/20"}`}
-        />
+        <span key={i} className={`h-1.5 w-6 ${i <= level ? "bg-primary" : "bg-foreground/20"}`} />
       ))}
     </div>
   );
@@ -106,7 +103,7 @@ function ContactForm() {
         setSending(true);
         const subject = encodeURIComponent(`Project enquiry from ${firstName}`);
         const body = encodeURIComponent(`${message}\n\n— ${firstName} (${email})`);
-        window.location.href = `mailto:kiptanuiboaz@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:boaserem022@gmail.com?subject=${subject}&body=${body}`;
         toast.success("Opening your mail client…");
         setSending(false);
       }}
@@ -173,7 +170,7 @@ function HomePage() {
           <div className="font-display text-sm tracking-tight">
             <span className="text-primary">BK</span>
             <span className="mx-2 text-foreground/30">/</span>
-            <span className="text-foreground/70">Kiptanui</span>
+            <span className="text-foreground/70">Serem</span>
           </div>
           <nav className="hidden items-center gap-7 sm:flex">
             {[
@@ -191,24 +188,29 @@ function HomePage() {
               </a>
             ))}
           </nav>
-          <div className="label-mono text-foreground/40">Nairobi, KE</div>
+          <a
+            href="#contact"
+            className="label-mono inline-flex items-center gap-2 bg-primary px-4 py-3 text-primary-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
+          >
+            Contact me <span aria-hidden="true">→</span>
+          </a>
         </header>
 
         {/* Hero */}
         <section className="relative grid grid-cols-12 gap-x-6 pt-16 pb-16 sm:pt-24 sm:pb-24">
           <div className="col-span-12 lg:col-span-7">
             <div className="rise label-mono mb-7 tracking-[0.22em] text-primary">
-              Software Developer · Design-Forward Engineering
+              Software Engineer · Design-Forward Engineering
             </div>
-            <h1 className="rise font-display text-[clamp(3.25rem,12vw,9rem)] leading-[0.92] font-semibold tracking-[-0.03em] text-balance [animation-delay:80ms]">
+            <h1 className="rise font-display text-[clamp(3.25rem,12vw,7rem)] leading-[0.92] font-semibold tracking-[-0.03em] text-balance [animation-delay:80ms]">
               Boaz
               <br />
-              Kiptanui<span className="text-primary">.</span>
+              Serem<span className="text-primary">.</span>
             </h1>
             <p className="rise mt-9 max-w-[46ch] text-[15px] leading-relaxed text-pretty text-foreground/70 sm:text-base [animation-delay:160ms]">
-              I build enterprise-grade web applications with Node.js, React and Next.js —
-              from a Notion-calendar engine to a full commerce stack. Clean, modular code
-              and interfaces that hold up in production.
+              I build scalable, high-performance applications with Python, Django, Node.js, React
+              and Next.js. I work across AI-powered features, cloud infrastructure and automated
+              delivery to create user-focused systems that hold up in production.
             </p>
           </div>
           <div className="relative col-span-12 mt-12 min-h-[320px] lg:col-span-5 lg:mt-0">
@@ -239,7 +241,7 @@ function HomePage() {
             <div className="label-mono mb-4 text-primary">01 — About</div>
             <img
               src={portrait}
-              alt="Portrait of Boaz Kiptanui, software developer"
+              alt="Portrait of Boaz Serem, software engineer"
               loading="lazy"
               className="aspect-4/5 w-full bg-card object-cover outline outline-offset-[-1px] outline-border"
             />
@@ -249,11 +251,10 @@ function HomePage() {
               A developer who treats the browser like a print shop.
             </h2>
             <p className="max-w-[58ch] text-[15px] leading-relaxed text-pretty text-foreground/70">
-              I have a strong track record in enterprise-level web development using
-              Node.js, React and Next.js, with deep experience across JavaScript and
-              TypeScript. I build web applications, write clean and modular code,
-              collaborate closely with designers and ship on time. Based in Nairobi,
-              working across time zones.
+              I am a software engineer based in Nairobi, Kenya, with experience delivering scalable
+              full-stack and mobile applications from concept to deployment. My work spans
+              AI-powered features, responsive interfaces, cloud infrastructure, API design and
+              automated CI/CD workflows.
             </p>
             <div className="mt-8 border-t border-border pt-6">
               <div className="label-mono mb-4 text-foreground/40">Tech stack</div>
@@ -269,9 +270,9 @@ function HomePage() {
               href={RESUME_URL}
               target="_blank"
               rel="noreferrer"
-              className="label-mono mt-8 inline-flex items-center gap-2 border-b border-input pb-1 text-foreground transition-colors duration-300 hover:border-primary hover:text-primary"
+              className="label-mono mt-8 inline-flex items-center gap-2 bg-primary px-5 py-3 text-primary-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
             >
-              View résumé <span className="text-primary">↓</span>
+              View résumé <span aria-hidden="true">↓</span>
             </a>
           </div>
         </section>
@@ -285,9 +286,7 @@ function HomePage() {
                 Capabilities, graded.
               </h2>
             </div>
-            <div className="label-mono hidden text-foreground/40 sm:block">
-              Scale 1 — 5
-            </div>
+            <div className="label-mono hidden text-foreground/40 sm:block">Scale 1 — 5</div>
           </div>
           <div className="grid grid-cols-1 gap-x-12 sm:grid-cols-2">
             {skills.map((skill) => (
@@ -297,12 +296,50 @@ function HomePage() {
               >
                 <div>
                   <div className="font-display text-base tracking-tight">{skill.text}</div>
-                  <div className="label-mono text-[10px] text-foreground/40">
-                    {skill.note}
-                  </div>
+                  <div className="label-mono text-[10px] text-foreground/40">{skill.note}</div>
                 </div>
                 <Level level={skill.level} />
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Experience */}
+        <section id="experience" className="border-t border-border py-16 sm:py-20">
+          <div className="mb-10 flex items-end justify-between">
+            <div>
+              <div className="label-mono mb-4 text-primary">03 — Experience</div>
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+                Building in production.
+              </h2>
+            </div>
+            <div className="label-mono hidden text-foreground/40 sm:block">2023 — Present</div>
+          </div>
+          <div className="space-y-10">
+            {experience.map((role) => (
+              <article key={`${role.company}-${role.role}`} className="border-t border-border pt-5">
+                <div className="grid gap-4 sm:grid-cols-[1fr_auto] sm:items-start">
+                  <div>
+                    <h3 className="font-display text-xl tracking-tight">{role.role}</h3>
+                    <div className="label-mono mt-2 text-primary">{role.company}</div>
+                  </div>
+                  <div className="label-mono text-foreground/40 sm:text-right">
+                    {role.dates}
+                    <br />
+                    {role.location}
+                  </div>
+                </div>
+                <ul className="mt-5 grid gap-2 text-sm leading-relaxed text-foreground/65 sm:grid-cols-2 sm:gap-x-10">
+                  {role.highlights.map((highlight) => (
+                    <li
+                      key={highlight}
+                      className="before:mr-2 before:text-primary before:content-['+']"
+                    >
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </article>
             ))}
           </div>
         </section>
@@ -311,22 +348,19 @@ function HomePage() {
         <section id="work" className="border-t border-border py-16 sm:py-20">
           <div className="mb-10 flex items-end justify-between">
             <div>
-              <div className="label-mono mb-4 text-primary">03 — Work</div>
+              <div className="label-mono mb-4 text-primary">04 — Work</div>
               <h2 className="font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
                 Selected projects.
               </h2>
             </div>
-            <div className="label-mono hidden text-foreground/40 sm:block">
-              2022 — 2026
-            </div>
+            <div className="label-mono hidden text-foreground/40 sm:block">2022 — 2026</div>
           </div>
-          <div className="grid grid-cols-12 gap-x-6">
+          <div className="grid grid-cols-1 gap-x-6 md:grid-cols-3">
             {projects.map((project, index) => {
-              const wide = index % 3 === 0 || index === 3 || index === 5;
               return (
                 <article
                   key={project.slug}
-                  className={`col-span-12 ${wide ? "md:col-span-7" : "md:col-span-5"} ${
+                  className={`col-span-1${
                     index === 0 ? "" : index === 1 ? "mt-12 md:mt-0" : "mt-12"
                   }`}
                 >
@@ -338,16 +372,12 @@ function HomePage() {
                       {project.year}
                     </span>
                   </div>
-                  <Link
-                    to="/projects/$slug"
-                    params={{ slug: project.slug }}
-                    className="block"
-                  >
+                  <Link to="/projects/$slug" params={{ slug: project.slug }} className="block">
                     <img
                       src={project.image}
                       alt={`${project.name} interface screenshot`}
                       loading="lazy"
-                      className={`w-full ${wide ? "aspect-video" : "aspect-4/3"} bg-card object-cover outline outline-offset-[-1px] outline-border transition-opacity duration-300 hover:opacity-80`}
+                      className="aspect-4/3 w-full bg-card object-cover outline outline-offset-[-1px] outline-border transition-opacity duration-300 hover:opacity-80"
                     />
                   </Link>
                   <div className="mt-4 flex items-baseline justify-between gap-4">
@@ -404,24 +434,22 @@ function HomePage() {
           className="grid grid-cols-12 gap-x-6 border-t border-border py-16 sm:py-20"
         >
           <div className="col-span-12 sm:col-span-5">
-            <div className="label-mono mb-4 text-primary">04 — Contact</div>
+            <div className="label-mono mb-4 text-primary">05 — Contact</div>
             <h2 className="font-display text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
               Let's make something considered.
             </h2>
             <p className="mt-6 max-w-[40ch] text-[15px] leading-relaxed text-pretty text-foreground/65">
-              I thrive in fast-paced settings and stay close to where web development is
-              heading. Tell me about the project, the timeline, and what good looks like.
+              I thrive in fast-paced settings and stay close to where web development is heading.
+              Tell me about the project, the timeline, and what good looks like.
             </p>
-            <div className="mt-8 font-mono text-xs text-foreground/60">
-              kiptanuiboaz@gmail.com
-            </div>
+            <div className="mt-8 font-mono text-xs text-foreground/60">boaserem022@gmail.com</div>
           </div>
           <ContactForm />
         </section>
 
         <footer className="flex flex-col items-start justify-between gap-6 border-t border-border py-10 sm:flex-row sm:items-center">
           <div className="label-mono text-foreground/45">
-            © 2026 Boaz Kiptanui — Set in Sora &amp; Manrope
+            © 2026 Boaz Serem — Set in Sora &amp; Manrope
           </div>
           <nav className="flex gap-6">
             {socials.map((social) => (

@@ -17,20 +17,68 @@ export type Project = {
   codeLink: string;
 };
 
-export const projects: Project[] = [
+export type Experience = {
+  role: string;
+  company: string;
+  dates: string;
+  location: string;
+  highlights: string[];
+};
+
+export const experience: Experience[] = [
   {
-    slug: "notical",
-    name: "Notical",
-    year: "2024",
-    summary:
-      "A Notion-to-Google-Calendar bridge that lets you manage Notion tasks straight from your calendar.",
-    description:
-      "Notycal is a dynamic integration tool designed to seamlessly connect your Notion workspace with your Google Calendar. It empowers you to edit and manage your Notion tasks straight from your Google Calendar interface. With Notycal, balancing your schedule and tasks becomes more efficient than ever before.",
-    stack: ["TypeScript", "Next.js", "Supabase", "MUI", "Redux"],
-    image: notical,
-    deployLink: "https://app.noticale.com/",
-    codeLink: "https://github.com/kiptanuiBoaz/notical-app",
+    role: "Front-End Engineer",
+    company: "Resarv",
+    dates: "April 2025 - Present",
+    location: "Remote",
+    highlights: [
+      "Translated Figma designs into pixel-perfect, production-ready user journeys.",
+      "Led adoption of Next.js 14+ and React Server Components to improve page performance.",
+      "Built responsive interfaces with Tailwind CSS and Framer Motion, achieving a 98% Lighthouse performance score.",
+      "Reduced content delivery times by 40% with ISR and a headless CMS.",
+      "Designed a secure OAuth 2.0 authentication flow with NextAuth.js.",
+    ],
   },
+  {
+    role: "Software Engineer",
+    company: "Devligence",
+    dates: "May 2024 - Present",
+    location: "Nairobi, Kenya",
+    highlights: [
+      "Architected scalable web applications from concept through deployment, including AI-powered features.",
+      "Built a Django REST Framework and PostgreSQL API supporting 10,000+ concurrent users.",
+      "Deployed applications on AWS and automated releases with GitHub Actions.",
+      "Improved system interoperability and data flow efficiency by 30% through REST and GraphQL APIs.",
+      "Implemented Playwright and Cypress testing strategies that reduced post-deployment bugs by 25%.",
+    ],
+  },
+  {
+    role: "Software Engineer (Part-time)",
+    company: "Mzizi",
+    dates: "March 2023 - December 2024",
+    location: "Nairobi, Kenya",
+    highlights: [
+      "Led mobile development of a cross-platform Agritech application with React Native and Expo, delivering the MVP two weeks early.",
+      "Improved data-fetching performance by 20% with Apollo Client, GraphQL state management, and caching.",
+      "Implemented server-side rendering with Next.js to improve web platform discoverability and organic traffic.",
+    ],
+  },
+];
+
+export const projects: Project[] = [
+  // {
+  //   slug: "notical",
+  //   name: "Notical",
+  //   year: "2024",
+  //   summary:
+  //     "A Notion-to-Google-Calendar bridge that lets you manage Notion tasks straight from your calendar.",
+  //   description:
+  //     "Notycal is a dynamic integration tool designed to seamlessly connect your Notion workspace with your Google Calendar. It empowers you to edit and manage your Notion tasks straight from your Google Calendar interface. With Notycal, balancing your schedule and tasks becomes more efficient than ever before.",
+  //   stack: ["TypeScript", "Next.js", "Supabase", "MUI", "Redux"],
+  //   image: notical,
+  //   deployLink: "https://app.noticale.com/",
+  //   codeLink: "https://github.com/kiptanuiBoaz/notical-app",
+  // },
   {
     slug: "wazibiz-ecommerce",
     name: "WaziBiz Ecommerce",
@@ -57,32 +105,32 @@ export const projects: Project[] = [
     deployLink: "https://geekgazette.vercel.app/",
     codeLink: "https://github.com/kiptanuiBoaz/geekgazette/",
   },
-  {
-    slug: "harry-potter",
-    name: "Harry Potter",
-    year: "2023",
-    summary:
-      "App Router experiment fetching the Harry Potter API into an indexed character register.",
-    description:
-      "The Harry Potter web application is a Next.js project that utilises the App Router, fetching data from the Harry Potter API to display character information in a table. The character names serve as links to individual character pages with more details.",
-    stack: ["TypeScript", "Next.js", "SCSS", "Redux"],
-    image: harryPotter,
-    deployLink: "https://harry-potter-lovat-ten.vercel.app/",
-    codeLink: "https://github.com/kiptanuiBoaz/harry-potter",
-  },
-  {
-    slug: "sogy-landing-page",
-    name: "Sogy Landing Page",
-    year: "2022",
-    summary:
-      "A hotel landing page — my first React project and a study in interface craft.",
-    description:
-      "Sogy is a landing page for an imaginary hotel and represents my first project in React, marking a significant milestone in my journey as a web developer. After transitioning from vanilla JavaScript, HTML and CSS, I immersed myself in React to enhance my skills and explore the possibilities it offers. Sogy showcases my technical abilities alongside my growing expertise in designing appealing user interfaces.",
-    stack: ["JavaScript", "React", "SCSS"],
-    image: sogy,
-    deployLink: "https://sogy-poc.vercel.app/",
-    codeLink: "https://github.com/kiptanuiBoaz/sogy-poc",
-  },
+  // {
+  //   slug: "harry-potter",
+  //   name: "Harry Potter",
+  //   year: "2023",
+  //   summary:
+  //     "App Router experiment fetching the Harry Potter API into an indexed character register.",
+  //   description:
+  //     "The Harry Potter web application is a Next.js project that utilises the App Router, fetching data from the Harry Potter API to display character information in a table. The character names serve as links to individual character pages with more details.",
+  //   stack: ["TypeScript", "Next.js", "SCSS", "Redux"],
+  //   image: harryPotter,
+  //   deployLink: "https://harry-potter-lovat-ten.vercel.app/",
+  //   codeLink: "https://github.com/kiptanuiBoaz/harry-potter",
+  // },
+  // {
+  //   slug: "sogy-landing-page",
+  //   name: "Sogy Landing Page",
+  //   year: "2022",
+  //   summary:
+  //     "A hotel landing page — my first React project and a study in interface craft.",
+  //   description:
+  //     "Sogy is a landing page for an imaginary hotel and represents my first project in React, marking a significant milestone in my journey as a web developer. After transitioning from vanilla JavaScript, HTML and CSS, I immersed myself in React to enhance my skills and explore the possibilities it offers. Sogy showcases my technical abilities alongside my growing expertise in designing appealing user interfaces.",
+  //   stack: ["JavaScript", "React", "SCSS"],
+  //   image: sogy,
+  //   deployLink: "https://sogy-poc.vercel.app/",
+  //   codeLink: "https://github.com/kiptanuiBoaz/sogy-poc",
+  // },
   {
     slug: "simonsgame",
     name: "Simon Game",
@@ -99,31 +147,40 @@ export const projects: Project[] = [
 ];
 
 export const skills: { text: string; note: string; level: number }[] = [
-  { text: "React", note: "Components / State", level: 5 },
-  { text: "JS / TS", note: "Type Safety", level: 4 },
-  { text: "Node.js", note: "APIs / Services", level: 4 },
-  { text: "MongoDB", note: "Documents", level: 4 },
-  { text: "Supabase", note: "Postgres / Auth", level: 4 },
-  { text: "REST APIs", note: "Contracts", level: 4 },
-  { text: "GraphQL", note: "Schemas / Resolvers", level: 4 },
-  { text: "Git", note: "Branching / Review", level: 4 },
-  { text: "SQL", note: "Data / Query", level: 3 },
-  { text: "Firebase", note: "Realtime / Hosting", level: 3 },
-  { text: "WordPress", note: "CMS / Elementor", level: 3 },
+  { text: "Python", note: "Django / DRF", level: 4 },
+  { text: "JavaScript / TypeScript", note: "Web Applications", level: 5 },
+  { text: "Node.js", note: "NestJS / Services", level: 4 },
+  { text: "React", note: "Next.js / Native", level: 5 },
+  { text: "REST / GraphQL", note: "APIs / Contracts", level: 4 },
+  { text: "PostgreSQL / MySQL", note: "Relational Data", level: 4 },
+  { text: "MongoDB", note: "Document Data", level: 4 },
+  { text: "AWS", note: "EC2 / S3 / Lambda", level: 3 },
+  { text: "CI/CD", note: "GitHub Actions", level: 4 },
+  { text: "Docker", note: "Containerization", level: 3 },
+  { text: "Playwright / Cypress", note: "End-to-end Testing", level: 4 },
 ];
 
 export const stack = [
+  "Python",
+  "Django",
+  "Django REST Framework",
   "Node.js",
+  "NestJS",
   "React",
   "TypeScript",
   "Next.js",
-  "Supabase",
+  "React Native",
+  "Expo",
+  "GraphQL",
+  "PostgreSQL",
   "MySQL",
   "MongoDB",
-  "Redux",
-  "Firebase",
+  "AWS",
+  "Docker",
+  "GitHub Actions",
+  "Playwright",
+  "Cypress",
   "Git",
-  "WordPress",
 ];
 
 export const socials = [
