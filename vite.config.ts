@@ -23,7 +23,7 @@ const staticRoutes = ["/", ...projectSlugs.map((slug) => `/projects/${slug}`)];
 export default defineConfig({
   vite: isGitHubPages ? { base: basePath } : {},
   // GitHub Pages serves static files only — skip the server bundle packaging.
-  nitro: isGitHubPages ? false : undefined,
+  ...(isGitHubPages ? { nitro: false as const } : {}),
   tanstackStart: isGitHubPages
     ? {
         prerender: { enabled: true, crawlLinks: true, autoSubfolderIndex: true },
