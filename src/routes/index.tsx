@@ -31,7 +31,7 @@ function Level({ level }: { level: number }) {
       {[1, 2, 3, 4, 5].map((i) => (
         <span
           key={i}
-          className={`h-1.5 w-6 ${i <= level ? "bg-primary" : "bg-foreground/20"}`}
+          className={`h-1.5 w-6 ${i <= level ? "bg-primary/70" : "bg-foreground/12"}`}
         />
       ))}
     </div>
