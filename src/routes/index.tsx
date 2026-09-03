@@ -38,6 +38,55 @@ function Level({ level }: { level: number }) {
   );
 }
 
+function HeroGraphic() {
+  return (
+    <div
+      className="pointer-events-none absolute inset-0 -top-12 -right-6 hidden opacity-40 lg:block lg:opacity-100"
+      aria-hidden="true"
+    >
+      <div className="relative h-full w-full pt-24 font-mono text-[10px] leading-[1.1] text-foreground/20">
+        <div className="flex gap-4">
+          <div className="flex flex-col gap-1">
+            <div className="text-primary/40">01 class Architecture {"{"}</div>
+            <div>&nbsp;&nbsp;constructor(data) {"{"}</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;this.nodes = new Set();</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;this.edges = [];</div>
+            <div className="text-primary/20">&nbsp;&nbsp;{"}"}</div>
+            <div>&nbsp;&nbsp;async render() {"{"}</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;const flow = await pipe(</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.nodes,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;optimize()</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;);</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;return flow.paint();</div>
+            <div>&nbsp;&nbsp;{"}"}</div>
+            <div className="text-primary/40">{"}"}</div>
+          </div>
+          <div className="hidden flex-col gap-1 border-l border-primary/10 pl-4 pt-12 xl:flex">
+            <div className="text-primary/60">[SYSTEM_READY]</div>
+            <div className="my-2 h-px w-24 bg-primary/20" />
+            <div>LATENCY: 14ms</div>
+            <div>THROUGHPUT: 1.2GB/s</div>
+            <div>UPTIME: 99.99%</div>
+            <div className="mt-4 text-foreground/10">
+              &lt;svg viewBox=&quot;0 0 100 100&quot;&gt;
+              <br />
+              &nbsp;&nbsp;&lt;path d=&quot;M10,50 Q30,10 50,50&quot; /&gt;
+              <br />
+              &lt;/svg&gt;
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="h-64 w-64 animate-pulse rounded-full border border-primary/10" />
+          <div className="absolute h-48 w-48 rotate-45 border border-foreground/5" />
+          <div className="absolute top-1/2 left-0 h-px w-full bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ContactForm() {
   const [sending, setSending] = useState(false);
 
@@ -146,8 +195,8 @@ function HomePage() {
         </header>
 
         {/* Hero */}
-        <section className="grid grid-cols-12 gap-x-6 pt-16 pb-16 sm:pt-24 sm:pb-24">
-          <div className="col-span-12 sm:col-span-9">
+        <section className="relative grid grid-cols-12 gap-x-6 pt-16 pb-16 sm:pt-24 sm:pb-24">
+          <div className="col-span-12 lg:col-span-7">
             <div className="rise label-mono mb-7 tracking-[0.22em] text-primary">
               Software Developer · Design-Forward Engineering
             </div>
@@ -162,19 +211,22 @@ function HomePage() {
               and interfaces that hold up in production.
             </p>
           </div>
-          <div className="col-span-12 sm:col-span-3 sm:justify-self-end sm:text-right">
-            <div className="rise label-mono text-foreground/40 [animation-delay:240ms]">
-              Available for
-              <br />
-              selected work · 2026
+          <div className="relative col-span-12 mt-12 min-h-[320px] lg:col-span-5 lg:mt-0">
+            <HeroGraphic />
+            <div className="rise relative z-10 sm:text-right [animation-delay:240ms]">
+              <div className="label-mono text-foreground/40">
+                Available for
+                <br />
+                selected work · 2026
+              </div>
+              <a
+                href="#contact"
+                className="rise label-mono mt-5 inline-flex items-center gap-2 border-b border-input pb-1 text-foreground transition-colors duration-300 hover:border-primary hover:text-primary [animation-delay:300ms]"
+              >
+                Start a project
+                <span className="text-primary">→</span>
+              </a>
             </div>
-            <a
-              href="#contact"
-              className="rise label-mono mt-5 inline-flex items-center gap-2 border-b border-input pb-1 text-foreground transition-colors duration-300 hover:border-primary hover:text-primary [animation-delay:300ms]"
-            >
-              Start a project
-              <span className="text-primary">→</span>
-            </a>
           </div>
         </section>
 
