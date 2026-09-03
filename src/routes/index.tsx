@@ -31,7 +31,7 @@ function Level({ level }: { level: number }) {
       {[1, 2, 3, 4, 5].map((i) => (
         <span
           key={i}
-          className={`h-1.5 w-6 ${i <= level ? "bg-primary" : "bg-foreground/20"}`}
+          className={`h-1.5 w-6 ${i <= level ? "bg-primary/70" : "bg-foreground/12"}`}
         />
       ))}
     </div>
@@ -103,7 +103,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={sending}
-        className="group mt-8 bg-primary px-7 py-3 font-display text-sm tracking-tight text-primary-foreground transition-colors duration-300 hover:bg-foreground disabled:opacity-60"
+        className="group mt-8 border border-primary/60 bg-primary/8 px-7 py-3 font-display text-sm tracking-tight text-primary transition-colors duration-300 hover:bg-primary/15 disabled:opacity-60"
       >
         Send message{" "}
         <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -117,7 +117,7 @@ function ContactForm() {
 function HomePage() {
   return (
     <div className="min-h-screen bg-background font-body text-foreground">
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(125%_80%_at_18%_-12%,color-mix(in_oklab,var(--primary)_8%,transparent),transparent_58%),radial-gradient(140%_90%_at_90%_110%,oklch(0.15_0.04_140_/0.55),transparent_65%)]" />
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(125%_80%_at_18%_-12%,color-mix(in_oklab,var(--primary)_8%,transparent),transparent_58%),radial-gradient(140%_90%_at_90%_110%,oklch(0.11_0.03_145_/0.6),transparent_65%)]" />
 
       <div className="relative mx-auto max-w-[1180px] px-6 sm:px-10">
         <header className="flex items-center justify-between border-b border-border py-8">
@@ -146,7 +146,7 @@ function HomePage() {
             <span className="label-mono hidden text-foreground/40 lg:inline">Nairobi, KE</span>
             <a
               href="#contact"
-              className="label-mono inline-flex items-center gap-2 border border-primary px-4 py-2 text-primary transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+              className="label-mono inline-flex items-center gap-2 border border-primary/50 px-4 py-2 text-primary transition-colors duration-300 hover:border-primary hover:bg-primary/10"
             >
               Start a project
               <span aria-hidden="true">→</span>
